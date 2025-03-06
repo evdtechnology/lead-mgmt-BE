@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Next.js build output
+.next/
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Remove already tracked files
+git rm -r --cached node_modules .next .env
+git commit -m "Removed ignored files"
+git push origin main
