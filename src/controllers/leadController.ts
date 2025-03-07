@@ -8,7 +8,7 @@ const {DATA_CREATED} = SUCCESS_MESSAGE
 export async function getLeads(request: Request, response: Response) {
     try {
         // TODO - Fetch leads from the database
-        const leads = await leadModel.find({});
+        const leads = await leadModel.find({}).sort({createdAt: -1})
         response.json(leads); // Send fetched leads instead of an empty array
     } catch (error) {
         console.error("Error fetching leads:", error);
